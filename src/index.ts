@@ -122,7 +122,7 @@ interface Sha256Options {
   asString?: boolean;
 }
 
-export default function sha256(message: string | number[], options?: Sha256Options): string | number[] {
+function sha256(message: string | number[], options?: Sha256Options): string | number[] {
   if (typeof message === 'string') {
     message = convertString.UTF8.stringToBytes(message);
   }
@@ -196,3 +196,6 @@ sha256.x2 = function (message: string | number[], options?: Sha256Options): stri
   return sha256(sha256(message, { asBytes: true }), options);
 };
 
+export {
+	sha256
+}

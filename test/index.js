@@ -1,5 +1,5 @@
 import sha256 from 'sha256'
-import weappSha256 from '../dist/weapp-sha256.js'
+import { sha256 as weappSha256 } from '../dist/weapp-sha256.js'
 
 console.log('----- sha256 -----')
 console.log(sha256('hello'))
